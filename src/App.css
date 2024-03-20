@@ -1,0 +1,47 @@
+
+.box {
+  border: 3px solid #000;
+  width: 500px;
+  height: 650px;
+}
+h1, h2 {
+  text-align: center;
+  margin: 45px 0 45px 0;
+}
+.item-img {
+  margin-top: 50px;
+  width: 400px;
+  height: 400px;
+  display: block;
+  margin: auto;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 50px;
+}
+
+button {
+  margin-top: 15px;
+  border: none;
+  font-size: 25px;
+}
+button:hover {
+  background: rgba(70, 70, 70, 0.5);
+  color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.win {
+  border: 8px dashed rgb(105, 247, 105);
+}
+
+.lose {
+  border: 8px dashed rgb(255, 0, 0);
+}
+
+.tie {
+  border: 8px dashed rgb(0, 0, 0);
+}
