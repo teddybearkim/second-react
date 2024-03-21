@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import './App.css';
 import Box from "./component/Box";
-
+import RockImg from "./images/rock.jpg"
+import ScissorsImg from "./images/scissors.jpg"
+import PaperImg from "./images/paper.jpg"
 // 1. 박스 2개
 // 2. 타이틀
 // 3. 사진정보
@@ -14,15 +16,15 @@ import Box from "./component/Box";
 const choice = {
   rock: {
     name: "Rock",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9GMyAGUFbExJfAv2tyfomoE_MEQDyUfexZw&usqp=CAU"
+    img: RockImg
   },
   paper: {
     name: "Paper",
-    img: "https://lh3.googleusercontent.com/proxy/zn40CTfDNMHdcg0peqrmYPPI2azSscjcRxcB5rX2PljId48nVY4YnExfLjVKlZOmpBIMGn5P3m4tb2gBhdpIlC-K8xR6tU0"
+    img: PaperImg
   },
   scissors: {
     name: "Scissors",
-    img: "https://blog.kakaocdn.net/dn/2mqrU/btqFofJ2wP2/bofI0Wf6C0uQZPyHsKtSS0/img.png"
+    img: ScissorsImg
   }
 }
 function App() {
@@ -44,14 +46,14 @@ function App() {
     // user == scissors, computer == rock   user lose
     // user == paper, computer == rock   user win
     // user == paper, computer == scissors   user lose
-    if (user.name == computer.name) {
+    if (user.name === computer.name) {
       return "tie"
-    } else if (user.name == "Rock")
-      return computer.name == "Scissors" ? "win" : "lose"
-    else if (user.name == "Scissors")
-      return computer.name == "Paper" ? "win" : "lose"
-    else if (user.name == "Paper")
-      return computer.name == "Rock" ? "win" : "lose"
+    } else if (user.name === "Rock")
+      return computer.name === "Scissors" ? "win" : "lose"
+    else if (user.name === "Scissors")
+      return computer.name === "Paper" ? "win" : "lose"
+    else if (user.name === "Paper")
+      return computer.name === "Rock" ? "win" : "lose"
   }
     const randomChoice = () => {
       let itemArray = Object.keys(choice);
@@ -67,9 +69,9 @@ function App() {
           <Box title="Computer" item={computerSelect} result={result} />
         </div>
         <div className="main">
-          <button onClick={() => play("scissors")}>Scissors</button>
-          <button onClick={() => play("rock")}>Rock</button>
-          <button onClick={() => play("paper")}>Paper</button>
+          <button onClick={() => play("rock")}>✊</button>
+          <button onClick={() => play("scissors")}>✌️</button>
+          <button onClick={() => play("paper")}>✋</button>
         </div>
       </div>
     );

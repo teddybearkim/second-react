@@ -1,10 +1,10 @@
-
 .box {
   border: 3px solid #000;
   width: 500px;
   height: 650px;
 }
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   margin: 45px 0 45px 0;
 }
@@ -26,22 +26,31 @@ h1, h2 {
 button {
   margin-top: 15px;
   border: none;
-  font-size: 25px;
+  border-radius: 25px;
+  font-size: 50px;
 }
 button:hover {
-  background: rgba(70, 70, 70, 0.5);
+  background: rgba(105, 247, 105);
   color: #fff;
-  transition: 0.5s;
+  transition: 0.8s;
+  transform: scale(1.3);
   cursor: pointer;
 }
 .win {
-  border: 8px dashed rgb(105, 247, 105);
+  border: 8px solid #d0d32e;
+  border-radius: 15px;
+  background-color: #f8fa6b;
 }
 
 .lose {
-  border: 8px dashed rgb(255, 0, 0);
+  border: 8px solid #888888;
+  border-radius: 15px;
+  background-color: #ddd;
+  opacity: 0.3;
+
 }
 
 .tie {
-  border: 8px dashed rgb(0, 0, 0);
+  border: 8px solid rgb(0, 0, 0);
+  border-radius: 15px;
 }
